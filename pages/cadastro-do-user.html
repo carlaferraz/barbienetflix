@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Assinatura</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <script>
+            function cadastrar() {
+                
+                const nome = document.getElementById('nome').value;
+                const sobrenome = document.getElementById('sobrenome').value;
+                const email = document.getElementById('email').value;
+                const celular = document.getElementById('celular').value;
+                const senha = document.getElementById('senha').value;
+                const confirmesenha = document.getElementById('confimesenha`').value;
+    
+                if (!email || !senha) {
+                    document.getElementById('campoObrigatorio').style.display = 'block';
+                    return;
+                } else {
+                    document.getElementById('campoObrigatorio').style.display = 'none';
+                }
+    
+                if (senha.length < 8 || senha.length > 16) {
+                    document.getElementById('tamanhoSenha').style.display = 'block';
+                    return;
+                } else {
+                    document.getElementById('tamanhoSenha').style.display = 'none';
+                }
+    
+                console.log("Email: " + email);
+                console.log("Senha: " + senha);
+    
+                console.log('chamou realizar login');
+            }
+    
+            function mostrarSenha() {            
+                var campoSenha = document.getElementById('senha');
+    
+                if (campoSenha.type == 'text') {
+                    campoSenha.type = 'password';
+                } else {
+                    campoSenha.type = 'text';
+                }
+            }
+        </script>
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <!--NAV BAR-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+    
+                <!--BARBIE LOGO-->
+                <!--MUDANÇA DE TAMANHO DA LOGO INLINE-->
+    
+              <a class="navbar-brand" href="index.html">
+                <img src="midia/movies.png" alt="Barbie Movies Logo" class="img-fluid">
+              </a>
+    
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+    
+              
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+    
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+    
+                    <!--MUDANÇA DE COR E NEGRITO INLINE-->
+                    <a class="nav-link bold-link active" aria-current="page" href="index.html" style="color: #ec008c; font-weight: bold;">Home</a>
+                  </li>
+    
+    
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Filmes</a>
+                  </li>
+    
+                  <li class="nav-item">
+                    <a class="nav-link" href="#bombando">Bombando</a>
+                  </li>
+    
+                  <li class="nav-item">
+                    <a class="nav-link" href="">Minha Lista</a>
+                  </li>
+    
+                  <!--DROPDOWN MENU-->
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Navegar por ano
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#2001-2005">2001 - 2005</a></li>
+                      <li><a class="dropdown-item" href="#2006-2010">2006 - 2010</a></li>
+                      <li><a class="dropdown-item" href="#2011-2015">2011 - 2015</a></li>
+                      <li><a class="dropdown-item" href="#2016-2020">2016 - 2020</a></li>
+                      <li><a class="dropdown-item" href="#2021-2024">2021 - 2024</a></li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+    
+                <!--BARRA DE PESQUISA-->
+                <div class="d-flex align-items-center">
+                    <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Procurar" aria-label="Procurar">
+                    <button class="btn btn-outline-success" type="submit">
+                        <img src="midia/search-13-32.ico" alt="">
+                    </button>
+                    </form>
+    
+                <!--ICONE DE PERFIL DE USUARIO-->
+                <!--MUDANÇA DE TAMANHO DO ICONE INLINE-->
+                    <ul class="navbar-nav ms-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="cadastro-do-user.html">
+                                <img src="midia/contacts-32.ico" alt="user profile" width="70%">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+    
+    </header>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Cadastre-se</h1>
+    
+        <div class="row">
+            <div class="col">
+                <div class="form-image">
+
+                    <!--MUDEI O TAMANHO DA IMAGEM AQUI! INLINEEEEEEEEEEEE-->
+
+                    <img src="barbiewallpaper.jpg" alt="" width="60%">
+                </div>
+            </div>
+    
+            <div class="col">
+                <div class="form-user">
+                    <form id="formCadastro" method="POST" action="/cadastrar">
+                        <div class="container mb-3">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="firstname" class="form-label">Primeiro Nome</label>
+                                    <input type="text" class="form-control" placeholder="Digite seu primeiro nome"
+                                        id="firstname" name="firstname" required>
+                                </div>
+                                <div class="col">
+                                    <label for="surname" class="form-label">Sobrenome</label>
+                                    <input type="text" class="form-control" placeholder="Digite seu sobrenome"
+                                        id="surname" name="surname" required>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="container mt-3 mb-3">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="email" class="form-label">E-mail</label>
+                                    <input type="email" class="form-control" placeholder="Digite seu e-mail" id="email"
+                                        name="email" required>
+                                </div>
+    
+                                <div class="col">
+                                    <label for="tel" class="form-label">Celular</label>
+                                    <input type="tel" class="form-control" placeholder="(XX) XXXXX-XXXX" id="tel" name="tel"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="container mt-3 mb-3">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="password" class="form-label">Senha</label>
+                                    <input type="password" class="form-control" placeholder="Digite sua senha" id="senha"
+                                        name="senha" required>
+                                </div>
+    
+                                <div class="col">
+                                    <label for="confirmpassword" class="form-label">Confirme sua Senha</label>
+                                    <input type="password" class="form-control" placeholder="Digite sua senha novamente"
+                                        id="confirmpassword" name="confirmpassword" required>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="text-end">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                            <input onclick="mostrarSenha()" type="checkbox"> Mostrar senha
+                        </div>
+
+                        
+    
+                    </form>
+
+                    <div>
+                        Já tem uma conta?
+                        <a href="login.html">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <div class="mt-5">
+        <footer class="bg-dark text-white text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>Sobre Nós</h5>
+                        <p>Informações sobre a empresa.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Links Rápidos</h5>
+                        <ul class="list-unstyled footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html">Filmes</a></li>
+                            <li><a href="index.html">Minha Lista</a></li>
+                            <li><a href="contato.html">Contato</a></li>
+                            <li><a href="alteracoes.html">ADMIN</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Contato</h5>
+                        <p>Email: contato@exemplo.com</p>
+                        <p>Telefone: (11) 1234-5678</p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <p>&copy; 2024 Barbie Movies. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+
+    <!--SCRIPT DO NOSSO ARQUIVO-->
+    <script src="script.js"></script>
+
+    <!--SCRIPT DO BOOTSTRAP-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
