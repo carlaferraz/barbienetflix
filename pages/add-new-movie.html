@@ -46,7 +46,7 @@
     <header>
 
         <!--NAV BAR-->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-dark">
             <div class="container-fluid">
     
                 <!--BARBIE LOGO-->
@@ -141,19 +141,29 @@
                                 <input type="text" name="name" class="form-control form-control-lg" placeholder="Digite o nome" required/>
                             </div>
                             <div class="mb-3">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" class="form-control form-control-lg" placeholder="Digite o Email" required/>
+                                <label for="opcoes">Escolha um ano </label><br>
+                                <select id="ano" name="opcoes">
+                                  <option value="opcao1">Selecionar</option>
+                                  <option value="opcao2">2001-2005</option>
+                                  <option value="opcao3">2006-2010</option>
+                                  <option value="opcao4">2011-2015</option>
+                                  <option value="opcao4">2016-2020</option>
+                                  <option value="opcao4">2021-2024</option>
+                                </select>
                             </div>
                             <div class="mb-3">
-                                <label for="phone">Celular</label>
-                                <input type="tel" name="phone" class="form-control form-control-lg" placeholder="Digite o celular" required/>
-                            </div>
-                            <div class="mb-3">
-                                <label for="image" class="form-label">Seleionar Imagem</label>
+                                <label for="image" class="form-label">Selecionar Imagem</label>
                                 <input type="file" name="image" class="form-control form-control-lg" required/>
+                                <img id="user-image" width="100" class="img-thumbnail mt-1" />
                             </div>
                             <div class="mb-3">
-                                <input type="submit" name="submit" value="Adicionar Usuário" class="btn btn-primary btn-lg" />
+                                <label for="image" class="form-label">Selecionar Vídeo</label>
+                                <input type="file" name="image" class="form-control form-control-lg" required/>
+                                <img id="user-image" width="100" class="img-thumbnail mt-1" />
+                            </div>
+                            <input type="hidden" name="old_image" id="old-image">
+                            <div class="mb-3">
+                                <input type="submit" name="submit" value="Atualizar Usuário" class="btn btn-success btn-lg" />
                             </div>
                         </form>
                     </div>

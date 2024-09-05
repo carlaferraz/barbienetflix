@@ -44,85 +44,85 @@
 
 
     <header>
+ <!--NAV BAR-->
+ <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
 
-        <!--NAV BAR-->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-    
-                <!--BARBIE LOGO-->
-                <!--MUDANÇA DE TAMANHO DA LOGO INLINE-->
-    
-              <a class="navbar-brand" href="index.html">
-                <img src="midia/movies.png" alt="Barbie Movies Logo" class="img-fluid">
-              </a>
-    
+        <!--BARBIE LOGO-->
+        <!--MUDANÇA DE TAMANHO DA LOGO INLINE-->
+
+      <a class="navbar-brand" href="index.html">
+        <img src="midia/movies.png" alt="Barbie Movies Logo" class="img-fluid">
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+
+            <!--MUDANÇA DE COR E NEGRITO INLINE-->
+            <a class="nav-link bold-link active" aria-current="page" href="index.html" style="color: #ec008c; font-weight: bold;">Home</a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Filmes</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#bombando">Bombando</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="">Minha Lista</a>
+          </li>
+
+          <!--DROPDOWN MENU-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Navegar por ano
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#2001-2005">2001 - 2005</a></li>
+              <li><a class="dropdown-item" href="#2006-2010">2006 - 2010</a></li>
+              <li><a class="dropdown-item" href="#2011-2015">2011 - 2015</a></li>
+              <li><a class="dropdown-item" href="#2016-2020">2016 - 2020</a></li>
+              <li><a class="dropdown-item" href="#2021-2024">2021 - 2024</a></li>
               
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-    
-              
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    
-    
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-    
-                    <!--MUDANÇA DE COR E NEGRITO INLINE-->
-                    <a class="nav-link bold-link active" aria-current="page" href="index.html" style="color: #ec008c; font-weight: bold;">Home</a>
-                  </li>
-    
-    
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">Filmes</a>
-                  </li>
-    
-                  <li class="nav-item">
-                    <a class="nav-link" href="#bombando">Bombando</a>
-                  </li>
-    
-                  <li class="nav-item">
-                    <a class="nav-link" href="">Minha Lista</a>
-                  </li>
-    
-                  <!--DROPDOWN MENU-->
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Navegar por ano
+            </ul>
+          </li>
+        </ul>
+
+        <!--BARRA DE PESQUISA-->
+        <div class="d-flex align-items-center">
+            <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Procurar" aria-label="Procurar">
+            <button class="btn btn-outline-success" type="submit">
+                <img src="midia/search-13-32.ico" alt="">
+            </button>
+            </form>
+
+        <!--ICONE DE PERFIL DE USUARIO-->
+        <!--MUDANÇA DE TAMANHO DO ICONE INLINE-->
+            <ul class="navbar-nav ms-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="cadastro-do-user.html">
+                        <img src="midia/contacts-32.ico" alt="user profile" width="70%">
                     </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#2001-2005">2001 - 2005</a></li>
-                      <li><a class="dropdown-item" href="#2006-2010">2006 - 2010</a></li>
-                      <li><a class="dropdown-item" href="#2011-2015">2011 - 2015</a></li>
-                      <li><a class="dropdown-item" href="#2016-2020">2016 - 2020</a></li>
-                      <li><a class="dropdown-item" href="#2021-2024">2021 - 2024</a></li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-    
-                <!--BARRA DE PESQUISA-->
-                <div class="d-flex align-items-center">
-                    <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Procurar" aria-label="Procurar">
-                    <button class="btn btn-outline-success" type="submit">
-                        <img src="midia/search-13-32.ico" alt="">
-                    </button>
-                    </form>
-    
-                <!--ICONE DE PERFIL DE USUARIO-->
-                <!--MUDANÇA DE TAMANHO DO ICONE INLINE-->
-                    <ul class="navbar-nav ms-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="cadastro-do-user.html">
-                                <img src="midia/contacts-32.ico" alt="user profile" width="70%">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-              </div>
-            </div>
-          </nav>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+      
     
     </header>
 
@@ -141,15 +141,23 @@
                                 <input type="text" name="name" class="form-control form-control-lg" placeholder="Digite o Nome" required/>
                             </div>
                             <div class="mb-3">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" class="form-control form-control-lg" placeholder="Digite o Email" required/>
-                            </div>
-                            <div class="mb-3">
-                                <label for="phone">Fone</label>
-                                <input type="tel" name="phone" class="form-control form-control-lg" placeholder="Digite o telefone" required/>
+                                <label for="opcoes">Escolha um ano </label><br>
+                                <select id="ano" name="opcoes">
+                                  <option value="opcao1">Selecionar</option>
+                                  <option value="opcao2">2001-2005</option>
+                                  <option value="opcao3">2006-2010</option>
+                                  <option value="opcao4">2011-2015</option>
+                                  <option value="opcao4">2016-2020</option>
+                                  <option value="opcao4">2021-2024</option>
+                                </select>
                             </div>
                             <div class="mb-3">
                                 <label for="image" class="form-label">Selecionar Imagem</label>
+                                <input type="file" name="image" class="form-control form-control-lg" required/>
+                                <img id="user-image" width="100" class="img-thumbnail mt-1" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="image" class="form-label">Selecionar Vídeo</label>
                                 <input type="file" name="image" class="form-control form-control-lg" required/>
                                 <img id="user-image" width="100" class="img-thumbnail mt-1" />
                             </div>
