@@ -112,4 +112,16 @@ h2 {
     margin: 0;
 }
 
-
+/*pagina alterações*/
+.main-container {
+    height: 100vh;
+  }
+  
+  .container_1,
+  .container_2 {
+    min-height: 100%;
+  }
+  
+  .full-btn {
+    height: 50vh;
+  }
