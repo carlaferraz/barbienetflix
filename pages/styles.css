@@ -112,16 +112,57 @@ h2 {
     margin: 0;
 }
 
-/*pagina alterações*/
-.main-container {
-    height: 100vh;
-  }
-  
-  .container_1,
-  .container_2 {
-    min-height: 100%;
-  }
-  
-  .full-btn {
-    height: 50vh;
-  }
+
+
+.bg-dark {
+    position: relative;
+    background: url('https://static1.colliderimages.com/wordpress/wp-content/uploads/2023/01/characters-from-barbie-movies.jpg?q=50&fit=crop&w=1140&h=&dpr=1.5') no-repeat center 20%/cover;
+    color: #fff;
+}
+
+.bg-dark::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Aumentando a opacidade para escurecer o fundo */
+    z-index: 1;
+}
+
+.bg-dark .container {
+    position: relative;
+    z-index: 2;
+}
+
+h5, p, .footer-link {
+    color: #f1f1f1;
+    font-size: 1.1em; /* Aumentando o tamanho da fonte */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Adicionando sombra no texto */
+}
+
+.footer-link:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    margin: 0 8px;
+    opacity: 0.8;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+.info-section {
+    background-color: #2c2f33; /* Cor sólida desejada */
+    color: #e0e0e0; /* Cor do texto, se necessário */
+}
+
+
+

@@ -50,17 +50,8 @@
                     <a class="nav-link bold-link active" aria-current="page" href="index.html" style="color: #ec008c; font-weight: bold;">Home</a>
                   </li>
     
-    
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">Filmes</a>
-                  </li>
-    
                   <li class="nav-item">
                     <a class="nav-link" href="#bombando">Bombando</a>
-                  </li>
-    
-                  <li class="nav-item">
-                    <a class="nav-link" href="">Minha Lista</a>
                   </li>
     
                   <!--DROPDOWN MENU-->
@@ -286,50 +277,53 @@
             </div>
         </section>
 
-        
-
-        
-
     </main>
-    
-
     <br>
-
     <div class="mt-5">
         <footer class="bg-dark text-white text-center">
-            <div class="container">
+            <div class="container py-5">
                 <div class="row">
-                    <div class="col-md-4">
-                        <h5>Sobre Nós</h5>
-                        <p>Informações sobre a empresa.</p>
+                    <!-- Sobre Nós -->
+                    <div class="col-md-4 mb-4">
+                        <h5 class="text-uppercase">Sobre Nós</h5>
+                        <p class="text-muted">Somos focados no seu bem estar e garantir seu entretenimento. E tudo isso de forma fácil e ágil!!</p>
+                        <p><strong>Email: </strong> barbiemovies@projects.com</p>
+                        <p><strong>Telefone:</strong> (11) 1234-5678</p>
                     </div>
-                    <div class="col-md-4">
-                        <h5>Links Rápidos</h5>
+                    
+                    <!-- Links Rápidos -->
+                    <div class="col-md-4 mb-4">
+                        <h5 class="text-uppercase">Links Rápidos</h5>
                         <ul class="list-unstyled footer-links">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="index.html">Filmes</a></li>
-                            <li><a href="index.html">Minha Lista</a></li>
-                            <li><a href="contato.html">Contato</a></li>
-                            <li><a href="alteracoes.html">ADMIN</a></li>
+                            <li><a href="index.html" class="footer-link">Home</a></li>
+                            <li><a href="alteracoes.html" class="footer-link">ADMIN</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-4">
-                        <h5>Contato</h5>
+                    
+                    <!-- Contato e Redes Sociais -->
+                    <div class="col-md-4 mb-4">
+                        <h5 class="text-uppercase">Contato</h5>
                         <p>Email: contato@exemplo.com</p>
                         <p>Telefone: (11) 1234-5678</p>
+                        <div class="social-icons mt-3">
+                            <a href="#" class="social-link"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg" alt="Facebook"></a>
+                            <a href="#" class="social-link"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter"></a>
+                            <a href="#" class="social-link"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+                        </div>
                     </div>
                 </div>
+                
+                <!-- Copyright -->
                 <div class="mt-4">
-                    <p>&copy; 2024 Barbie Movies. Todos os direitos reservados.</p>
+                    <p class="text-muted">&copy; <span id="year"></span> Barbie Movies. Todos os direitos reservados.</p>
                 </div>
             </div>
         </footer>
     </div>
-
-
-
-
-
+    
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
     <!--SCRIPT DO NOSSO ARQUIVO-->
     <script src="script.js"></script>
@@ -339,9 +333,4 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 </body>
-
-
-
-
-
 </html>
