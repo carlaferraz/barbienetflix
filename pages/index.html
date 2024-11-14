@@ -103,10 +103,12 @@
             <!--COLOCANDO O TRAILER-->
             <div class="video-container">
                 <!--CAPA-->
-                <img src="midia/Barbie Lago dos Cisnes CAPA.png" alt="Capa do Vídeo Barbie: Lago dos Cines" class="video-thumbnail" onclick="playVideo()">
+                <img src="midia/Barbie Lago dos Cisnes CAPA.png" alt="Capa do Vídeo Barbie: Lago dos Cisnes" class="video-thumbnail" onclick="playVideo()">
+                
                 <!--VIDEO-->
-                <video class="video" controls src="midia/Barbie Lago dos Cisnes VIDEO.mp4"></video>
-            
+                <video id="trailer" class="video" controls style="display:none;" src="midia/BarbieLagodosCisnesVIDEO.mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
             </div>
         </section>
         <!--COLOCANDO FILMES EM DESTAQUE-->
@@ -185,15 +187,7 @@
                     <a href="">
                         <img src="midia/6.png" alt="PEQUENO POLEGAR (2009)" class="grid-item">
                     </a>
-                    <a href="">
-                        <img src="..." alt="TRES MOSQUETEIRAS (2009)" class="grid-item">
-                    </a>
-                    <a href="">
-                        <img src="..." alt="VIDA DE SEREIA (2010)" class="grid-item">
-                    </a>
-                    <a href="">
-                        <img src="..." alt="FASHIONISTA (2010)" class="grid-item">
-                    </a>
+               
                     
                 </div>
             </div>
@@ -220,15 +214,7 @@
                     <a href="">
                     <img src="midia/6.png" alt="SAPATILHAS MAGICAS (2013)" class="grid-item">
                     </a>
-                    <a href="">
-                        <img src="..." alt="SEREIA DAS PEROLAS (2014)" class="grid-item">
-                    </a>
-                    <a href="">
-                        <img src="..." alt="PORTAL SECRETO (2014)" class="grid-item">
-                    </a>
-                    <a href="">
-                        <img src="..." alt="SUPER PRINCESA (2015)" class="grid-item">
-                    </a>
+               
                 </div>
             </div>
 
@@ -322,7 +308,17 @@
     </div>
     
     <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
+    function playVideo() {
+        var video = document.getElementById('trailer');
+        var thumbnail = document.querySelector('.video-thumbnail');
+        
+        // Esconde a capa
+        thumbnail.style.display = 'none';
+        
+        // Mostra o vídeo e começa a reprodução
+        video.style.display = 'block';
+        video.play();
+    }
     </script>
 
     <!--SCRIPT DO NOSSO ARQUIVO-->

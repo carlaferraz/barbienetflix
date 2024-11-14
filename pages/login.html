@@ -44,7 +44,7 @@
                     'email': email,
                     'senha': senha
                 };
-                const response = await fetch(`http://localhost:3000/api/login`, {
+                const response = await fetch(`http://localhost:5000/api/login`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -167,36 +167,52 @@
     </header>
 
 
-    <div class="container" style="width: 40%; margin-top: 30px;">
-        <h2> Acessar o sistema </h2>
-        <form>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email">
+    <div class="container mt-5">
+        <div class="row align-items-center shadow p-4 rounded">
+            <!-- Coluna da Imagem -->
+            <div class="col-md-6 d-none d-md-block">
+                <img src="midia/barbiewallpaperlogin.jpg" alt="Imagem de Fundo" class="img-fluid rounded">
             </div>
-            <div class="mb-3">
-                <label for="senha" class="form-label">Senha</label>
-                <input type="password" class="form-control" id="senha">
+            
+            <!-- Coluna do Formulário -->
+            <div class="col-md-6">
+                <h1 class="mb-4 text-center">Login</h1>
+                <form>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+                    </div>
+                    <div class="mb-3">
+                        <label for="senha" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input onclick="mostrarSenha()" type="checkbox" class="form-check-input" id="mostrarSenhaCheck">
+                        <label class="form-check-label" for="mostrarSenhaCheck">Mostrar senha</label>
+                    </div>
+                    <button onclick="realizarLogin()" type="button" class="btn-rosa w-100">Login</button>
+                    
+                    <!-- Mensagens de erro -->
+                    <div class="mt-3">
+                        <label id="campoObrigatorio" class="text-danger d-none">Os campos são obrigatórios.</label>
+                        <label id="tamanhoSenha" class="text-danger d-none">A senha deve ter entre 8 e 16 caracteres.</label>
+                        <label id="senhaRegex" class="text-danger d-none">O campo senha precisa ter: 1 caractere especial e 1 letra maiúscula.</label>
+                    </div>
+                    
+                    <!-- Link para cadastro -->
+                    <div class="mt-4 text-center">
+                        Ainda não possui uma conta? 
+                        <a href="cadastro-do-user.html">Cadastre-se</a>
+                    </div>
+                </form>
             </div>
-            <button onclick="realizarLogin()" type="button" class="btn btn-primary">Login</button>
-            <input onclick="mostrarSenha()" type="checkbox"> Mostrar senha
-        </form>
-        <label id="campoObrigatorio" class="error-label">Os campos são obrigatórios.</label>
-        <label id="tamanhoSenha" class="error-label">A senha deve ter entre 8 e 16 caracteres.</label>
-        <label id="senhaRegex" class="error-label">O campo senha precisa ter: 1 caracter especial e 1 letra
-            maiúscula.</label>
-        <br />
-
-        <div>
-            Ainda não possui uma conta?
-            <a href="cadastro-do-user.html">Cadastre-se</a>
         </div>
     </div>
 
 
 
 
-    <div class="mt-5">
+    <div class="mt-5 mb-5">
         <footer class="bg-dark text-white text-center">
             <div class="container">
                 <div class="row">

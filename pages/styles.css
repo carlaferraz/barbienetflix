@@ -165,4 +165,84 @@ h5, p, .footer-link {
 }
 
 
+.btn-rosa {
+    background-color: #ff69b4; /* Cor de fundo rosa */
+    border: none;
+    color: white; /* Cor do texto */
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease;
+}
 
+.btn-rosa:hover {
+    background-color: #ff85c1; /* Cor rosa mais clara ao passar o mouse */
+}
+
+.btn-rosa:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 105, 180, 0.6); /* Efeito de foco */
+}
+
+.form-container {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.video-thumbnail {
+    width: 100%;
+    cursor: pointer;
+}
+
+.video {
+    width: 100%;
+    display: none; /* Esconde o vídeo inicialmente */
+}
+
+.button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10; /* Garante que os botões fiquem sobre o vídeo */
+}
+
+
+.card {
+    border: none; /* Remove a borda do cartão */
+    background-color: #1e1e1e; /* Fundo dos cartões mais escuro */
+
+}
+
+.card img {
+    border-radius: 8px; /* Arredonda as bordas da imagem */
+}
+
+.list-group-item {
+    background-color: #2c2c2c; /* Cor de fundo da lista */
+
+}
+
+.list-group-item strong {
+    color: #ec008c; /* Cor do texto em negrito */
+}
+
+.card-title{
+    color: #2c2f33;
+}
