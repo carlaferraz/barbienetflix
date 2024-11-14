@@ -12,35 +12,56 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
         <script>
-            function cadastrar() {
-                
-                const nome = document.getElementById('nome').value;
-                const sobrenome = document.getElementById('sobrenome').value;
-                const email = document.getElementById('email').value;
-                const celular = document.getElementById('celular').value;
-                const senha = document.getElementById('senha').value;
-                const confirmesenha = document.getElementById('confimesenha`').value;
-    
-                if (!email || !senha) {
-                    document.getElementById('campoObrigatorio').style.display = 'block';
+            const salvar = async () => {
+                var nome = document.getElementById('nome').value;
+                var sobrenome = document.getElementById('sobrenome').value;
+                var email = document.getElementById('email').value;
+                var celular = document.getElementById('celular').value;
+                var senha = document.getElementById('senha').value;
+                var confirmesenha = document.getElementById('confirmesenha').value;
+            
+                console.log(nome);
+                console.log(sobrenome);
+                console.log(email);
+                console.log(celular);
+                console.log(senha);
+                console.log(confirmesenha);
+            
+                if (senha !== confirmesenha) {
+                    alert('Passwords do not match!');
                     return;
-                } else {
-                    document.getElementById('campoObrigatorio').style.display = 'none';
+                }
+            
+                const data = {
+                    nome: nome,
+                    sobrenome: sobrenome,
+                    email: email,
+                    celular: celular,
+                    senha: senha
                 }
     
-                if (senha.length < 8 || senha.length > 16) {
-                    document.getElementById('tamanhoSenha').style.display = 'block';
-                    return;
-                } else {
-                    document.getElementById('tamanhoSenha').style.display = 'none';
+                console.log(JSON.stringify(data));
+            
+                try {
+                    const response = await fetch(`http://localhost:3000/api/cadastrese`, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(data),
+                    });
+            
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+            
+                    const result = await response.json();
+                    console.log(result);
+                } catch (error) {
+                    console.error('There was a problem with the fetch operation:', error);
                 }
-    
-                console.log("Email: " + email);
-                console.log("Senha: " + senha);
-    
-                console.log('chamou realizar login');
             }
-    
+            
             function mostrarSenha() {            
                 var campoSenha = document.getElementById('senha');
     
